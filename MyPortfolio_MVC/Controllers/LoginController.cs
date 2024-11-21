@@ -8,6 +8,7 @@ using System.Web.Security;
 
 namespace MyPortfolio_MVC.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         MyPortfolioDbEntities1 db = new MyPortfolioDbEntities1 ();
@@ -28,7 +29,8 @@ namespace MyPortfolio_MVC.Controllers
             }
             FormsAuthentication.SetAuthCookie(values.Email, false);
 
-            Session["nameSurname"]=values.Name+ " " + values.Surname;
+            
+            Session["email"] = values.Email;
             return RedirectToAction("Index","Category");
 
         }

@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace MyPortfolio_MVC.Controllers
 {
+
     public class CategoryController : Controller
     {
         MyPortfolioDbEntities1 db = new MyPortfolioDbEntities1();
